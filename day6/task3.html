@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          //  tak-3
+          function findLengthOfNumber(num) {
+    let length = 0;
+    // Keep dividing the number by 10 until it's 0
+    while (num != 0) {
+        num = Math.floor(num / 10);
+        length++;
+    }
+    return length;
+}
+      // Test the function
+       let number = 12345;
+       console.log("The length of the number is:", findLengthOfNumber(number)); 
+        // Output: 5
+    </script>
+</body>
+</html>

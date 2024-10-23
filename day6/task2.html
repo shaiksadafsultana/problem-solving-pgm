@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  task-2
+        function findLCM(a, b) {
+    let min;
+    // Determine the minimum value between a and b
+    if (a > b) {
+        min = b;
+    } else {
+        min = a;
+    }
+    let max = a > b ? a : b;
+    // Check if max is divisible by both a and b
+    if (max % a === 0 && max % b === 0) {
+        console.log(max, "is the LCM");
+    } else {
+        let check = max;
+        // Infinite loop to find the LCM
+        while (true) {
+            check++;
+            if (check % a === 0 && check % b === 0) {
+                console.log(check, "is the LCM");
+                break;
+            }
+        }
+    }
+}
+        // Test the function
+         findLCM(3, 15);  // Example test case
+
+    </script>
+</body>
+</html>

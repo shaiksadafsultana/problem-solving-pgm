@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // task-1
+        const isArmstrong = (num) => {
+    let check = num;
+    let finalNum = num;
+    let pow = 0;
+    let sum = 0;
+    // First loop to calculate the number of digits
+    while (num != 0) {
+        num = Math.floor(num / 10);
+        pow++;
+    }
+    // Second loop to calculate the Armstrong sum
+    while (check != 0) {
+        let digit = check % 10;
+        sum += (digit ** pow);
+        check = Math.floor(check / 10);
+    }
+    // Check if sum equals the original number
+    if (sum === finalNum) {
+        console.log("It is an Armstrong number");
+    } else {
+        console.log("It is not an Armstrong number");
+    }
+};
+      // Test the function
+         isArmstrong(153);  // Example test case
+
+</script>
+</body>
+</html>
